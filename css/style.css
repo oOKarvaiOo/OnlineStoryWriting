@@ -1,6 +1,20 @@
 body {
   background: rgb(204,204,204);
 }
+
+.roomArea{
+  margin: 15px;
+}
+
+#joinInput{
+  max-width: 300px;
+  width: auto;
+}
+
+.writingArea{
+  display: none;
+}
+
 .A4 {
   background: white;
   display: block;

@@ -35,31 +35,62 @@
       </nav>
 
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-2">
-            <h3 class="storyHeaders">Writers</h3>
-          </div>
-          <div class="col-md-8">
-            <h3 class="storyHeaders">Your Story</h3>
-            <div class="A4">
-              <div class="storyTitle"></div>
-              <div class="storyBody"></div>
+        <div class="writingArea">
+          <div class="row">
+            <div class="col-md-2">
+              <h3 class="storyHeaders">Writers</h3>
             </div>
-            <div class="input-group justify-content-center">
-              <input type="text" class="form-control" id="storyInput" placeholder="Enter text">
-              <button type="submit" class="btn" id="storyBtn">Write</button>
+            <div class="col-md-8">
+              <h3 class="storyHeaders">Your Story</h3>
+              <div class="A4">
+                <div class="storyTitle"></div>
+                <div class="storyBody"></div>
+              </div>
+              <div class="input-group justify-content-center">
+                <input type="text" class="form-control" id="storyInput" placeholder="Enter text">
+                <button type="submit" class="btn" id="storyBtn">Write</button>
+              </div>
             </div>
-          </div>
-          <div class="col-md-2">
-            <h3 class="storyHeaders">Turn</h3>
+            <div class="col-md-2">
+              <h3 class="storyHeaders">Turn</h3>
+            </div>
           </div>
         </div>
 
+        <div class="roomArea">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="input-group justify-content-center">
+                <input type="text" class="form-control" id="joinInput" placeholder="Room code">
+                <button type="submit" class="btn" id="joinBtn">Join</button>
+              </div>
+            </div>
+            <div class="col-md-12 text-center">
+              OR
+            </div>
+            <div class="col-md-12">
+              <div class="input-group justify-content-center">
+                <button type="submit" class="btn" id="createBtn">Create</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     <script>
       $(function(){
         var socket = io.connect();
+
+        $("#createBtn").click(function(){
+          $.ajax({
+            url: "ajax.php",
+            type: "GET",
+            data: {action: "create"}
+          }).done(function(result) {
+            alert(result);
+          });
+
+        });
       });
     </script>
   </body>
