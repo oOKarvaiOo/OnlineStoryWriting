@@ -8,8 +8,10 @@ connections = [];
 server.listen(process.env.PORT || 3000);
 console.log('server running...');
 
+app.use(express.static(__dirname));
+
 app.get('/', function(req, res){
-  res.sendFile(__dirname+'/index.php');
+  res.sendFile('index.html' , { root : __dirname});
 });
 
 io.sockets.on('connection', function(socket){

@@ -1,0 +1,35 @@
+body {
+  background: rgb(204,204,204);
+}
+.A4 {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  width: 21cm;
+  max-height: 29.7cm;
+  min-height: 200px;
+  height:auto;
+  padding: 30px;
+
+}
+@media print {
+  body, .A4 {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+h3.storyHeaders{
+  text-align: center;
+  margin: 15px;
+}
+
+#storyInput{
+  max-width: 18cm;
+}
+
+#storyBtn{
+  max-width: 3cm;
+}
