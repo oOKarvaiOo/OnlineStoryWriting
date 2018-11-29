@@ -1,0 +1,23 @@
+{
+  "name": "onlinestorywriting",
+  "version": "1.0.0",
+  "description": "Write stories with your friends!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oOKarvaiOo/OnlineStoryWriting.git"
+  },
+  "author": "Karvai György",
+  "license": "ISC",
+  "dependencies":{
+    "socket.io":"*",
+    "express":"*"
+  },
+  "bugs": {
+    "url": "https://github.com/oOKarvaiOo/OnlineStoryWriting/issues"
+  },
+  "homepage": "https://github.com/oOKarvaiOo/OnlineStoryWriting#readme"
+}
